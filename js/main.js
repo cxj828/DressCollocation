@@ -211,7 +211,7 @@ function appStart(){
 		if($(this).is('.curr')){
 			$(this).removeClass('curr');
 			$(".s2 figure .item"+type).removeAttr('style');
-			if(type<=3){ $(this).parent().children(':eq(0)').trigger('click'); }
+			// if(type<=3){ $(this).parent().children(':eq(0)').trigger('click'); }
 			return;
 		}
 		var imgName = $(this).attr('data-img');
