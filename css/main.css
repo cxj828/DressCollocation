@@ -66,9 +66,9 @@
 .s1 h2 { top: 3%; font-size: 1.5em; font-weight: bold; text-align: center; white-space: nowrap;}
 .s1 h2 i { display: block; width: 31%; padding-bottom: 31%; margin: 0 auto 8%; background-image: url(../img/logo.png);}
 .s1 center { top: 41%; margin-top: -20%;}
-.s1 center h3 a { display: block; position: relative; width: 31.25%; padding-bottom: 31.25%; margin: 0 4%; background: url(../img/sex.png) no-repeat 7px 7px; background-size: 200% auto;}
+.s1 center h3 a { display: block; position: relative; width: 31.25%; padding-bottom: 31.25%; margin: 0 4%; background: url(../img/sex.png) no-repeat 0 0; background-size: 200% auto;}
 .s1 center h3 a+a { background-position-y: 100%;}
-.s1 center h3 a.curr { background-position-x: -123.5px;}
+.s1 center h3 a.curr { background-position-x: 113%;}
 .s1 center p { margin-top: 1.5%; font-weight: bold;color: #fff;}
 .s1 center h4 { margin-top: 6%;}
 .s1 center h4 a { display: inline-block; font-size: 1.5em;color: #FFFFFF;font-family: PingFangSC-Medium; font-weight: bold; line-height: 1em; padding: 0.7em 6em; border-radius: 2em; background-image: linear-gradient(-216deg, #DC02FF 0%, #9701FF 100%);}
