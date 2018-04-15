@@ -177,6 +177,7 @@ function appStart() {
             html += '<ul>';
             arr = app.poster.items[i - 1][sex - 1];
             $.each(arr, function () {
+                console.log('img/item' + i + '/i' + i + '-' + this + 's.png' + "--------")
                 html += '<li style="background-image: url(img/item' + i + '/i' + i + '-' + this + 's.png);" data-img="i' + i + '-' + this + '.png"></li>';
             });
             html += '</ul>';
