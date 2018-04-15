@@ -341,32 +341,48 @@ function getCurrUrl() {
 }
 
 function share() {
-    var _url = window.location.href;
-    var fromshare = getValue('from');
-    if (fromshare) {
-        window.location.href = _url;
-    } else {
-        var currUrl = getCurrUrl();
-        $.ajax({
-            'url': SERVER_DOMAIN + "/match/api/weixin/verify-share-config.post",
-            'data': JSON.stringify({'currUrl': currUrl}),
-            'contentType': "application/json; charset=utf-8",
-            'type': 'POST',
-            'cache': false,
-            'dataType': 'json',
-            'success': function (data) {
-                exeMatchWeiXinShareFun(data);
-            },
-            'error': function (e) {
-                console.log(JSON.stringify(e))
-            }
-        });
-    }
+    // var _url = window.location.href;
+    // var fromshare = getValue('from');
+    // if (fromshare) {
+    //     //window.location.href = _url;
+    // } else {
+    //     var currUrl = getCurrUrl();
+    //     $.ajax({
+    //         'url': SERVER_DOMAIN + "/match/api/weixin/verify-share-config.post",
+    //         'data': JSON.stringify({'currUrl': currUrl}),
+    //         'contentType': "application/json; charset=utf-8",
+    //         'type': 'POST',
+    //         'cache': false,
+    //         'dataType': 'json',
+    //         'success': function (data) {
+    //             exeMatchWeiXinShareFun(data);
+    //         },
+    //         'error': function (e) {
+    //             console.log(JSON.stringify(e))
+    //         }
+    //     });
+    // }
+
+    var currUrl = getCurrUrl();
+    $.ajax({
+        'url': SERVER_DOMAIN + "/match/api/weixin/verify-share-config.post",
+        'data': JSON.stringify({'currUrl': currUrl}),
+        'contentType': "application/json; charset=utf-8",
+        'type': 'POST',
+        'cache': false,
+        'dataType': 'json',
+        'success': function (data) {
+            exeMatchWeiXinShareFun(data);
+        },
+        'error': function (e) {
+            console.log(JSON.stringify(e))
+        }
+    });
 }
 
 function exeMatchWeiXinShareFun(data) {
 
-    var tit = tit ? tit : "制造「我」的草莓音乐节";
+    var tit = tit ? tit : "制造「我」的专属倔强搭配";
     var img = img ? img : 'http://wap.zhengzai.tv/pages/strawberry2018/cover.jpg';
     var des = des ? des : "2018以「我」出发，一起大不同";
     var url = getCurrUrl();
