@@ -710,8 +710,7 @@ function appStart() {
 
     /*app开始*/
     $(".load").addClass('no_animation').transit({opacity: 0}, 400, 'linear', function () {
-        alert(1)
-        $(this).remove();
+        $(this).hide();
         $(".s1").css({display: 'block', opacity: 0}).transit({opacity: 1}, 400, 'linear');
         //调试
         //createItemsList(1)
