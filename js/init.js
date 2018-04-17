@@ -242,50 +242,66 @@ app.loadRes = function () {
     load_line = document.querySelector('.load center p i');
     appLoad(['img/load4.png'], undefined, function () {
         load.style.display = 'block';
-        res = [
-            'css/main.css',
-            'js/jquery.2.1.1.min.js',
-            'js/jquery.transit.min.js',
-            'js/iscroll-lite.js',
-            'js/main.js',
-            'img/loading.png',
-            'img/logo.png',
-            'img/btn.png',
-            'img/ewm.png',
-            'img/item-class.png',
-            'img/role1.png',
-            'img/role2.png',
-            'img/title.png',
-            'img/title2.png',
-            'img/sex.png',
-            'img/share.png',
-            'img/bg/bg-1.png',
-            'img/bg/bg-2.png',
-            'img/bg/bg-3.png',
-            'img/bg/bg-4.png',
-            'img/bg/bg-5.png',
-            'img/creating_bg.png',
-            'img/creating_bg2.png'
-        ];
-        load.addEventListener('webkitAnimationEnd', function () {
-            appLoad({
-                res: res,
-                delayLoad: 300,
-                delayLoaded: 300,
-                onError: function () {
-                    window.appStart && appStart();
-                    // clearInterval(time)
-                },
-                //onLoading: function(p){	},
-                onLoaded: function () {
-                    window.appStart && appStart();
-                    // clearInterval(time)
+        var time_index = 1;
+        window.time2 = setInterval(function () {
+            if (time_index >= 3) {
+                clearInterval(window.time2);
+                loadSourceFun();
+            }
+            if (time_index <= 3) {
+                time_index++;
+                $(load).find('span').append('.');
+            }
+        }, 1000);
 
-                }
-            });
-        });
+        // load.addEventListener('webkitAnimationEnd', function () {
+        //
+        // });
     });
 };
+
+function loadSourceFun() {
+    res = [
+        'css/main.css',
+        'js/jquery.2.1.1.min.js',
+        'js/jquery.transit.min.js',
+        'js/iscroll-lite.js',
+        'js/main.js',
+        'img/loading.png',
+        'img/logo.png',
+        'img/btn.png',
+        'img/ewm.png',
+        'img/item-class.png',
+        'img/role1.png',
+        'img/role2.png',
+        'img/title.png',
+        'img/title2.png',
+        'img/sex.png',
+        'img/share.png',
+        'img/bg/bg-1.png',
+        'img/bg/bg-2.png',
+        'img/bg/bg-3.png',
+        'img/bg/bg-4.png',
+        'img/bg/bg-5.png',
+        'img/creating_bg.png',
+        'img/creating_bg2.png'
+    ];
+    appLoad({
+        res: res,
+        delayLoad: 300,
+        delayLoaded: 300,
+        onError: function () {
+            window.appStart && appStart();
+            // clearInterval(time)
+        },
+        //onLoading: function(p){	},
+        onLoaded: function () {
+            window.appStart && appStart();
+            // clearInterval(time)
+
+        }
+    });
+}
 
 
 //分享
