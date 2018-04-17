@@ -17,7 +17,7 @@ a, input { -webkit-tap-highlight-color: transparent; }
 /***** start load *****/
 .load { -webkit-animation: fadeIn 0.2s 0.1s linear both;background: #fff; }
 .load center { position: absolute; left: 0%; top: 50%; width: 100%; margin-top: -35%; }
-.load figure { -webkit-animation: ani-load2 1s both ease-in-out infinite; width: 75px; padding-bottom: 33%; margin: 0 auto; background-image: url(../img/load4.png);}
+.load figure { width: 75px; padding-bottom: 33%; margin: 0 auto; background-image: url(../img/load4.png);}
 .load h6 { font-size: 1.15em; font-weight: bold; margin-top: -8%; padding-left: 1.5em; }
 .load h6 q {display: inline-block; vertical-align: middle; width: 1.5em; text-align: left; margin-left: 0.1em;}
 .load h6 q span { -webkit-animation: ani-load1 0.8s linear infinite both; display: inline-block; white-space: nowrap; overflow: hidden; }
