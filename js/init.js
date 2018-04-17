@@ -223,25 +223,24 @@ window.addEventListener('touchstart', app.sound.Load, false);
 
 //加载资源
 app.loadRes = function () {
-    var img_index = 1;
+    var img_index = 4;
     window.time = setInterval(function () {
         $('.load figure').css('background-image', 'url(img/load' + img_index + '.png)');
-        img_index++;
-        if (img_index > 3) {
-            img_index = 1;
-        }
+        // img_index++;
+        // if (img_index > 4) {
+        //     img_index = 1;
+        // }
     }, 300);
     var load, load_text, load_line, res;
     if (document.readyState != 'complete') {
         window.addEventListener('load', app.loadRes, false);
         return;
     }
-    ;
     app.setSize();
     load = document.querySelector('.load');
     load_text = document.querySelector('.load center var');
     load_line = document.querySelector('.load center p i');
-    appLoad(['img/load1.png'], undefined, function () {
+    appLoad(['img/load4.png'], undefined, function () {
         load.style.display = 'block';
         res = [
             'css/main.css',
@@ -386,7 +385,6 @@ function exeMatchWeiXinShareFun(data) {
     var img = img ? img : 'http://wap.zhengzai.tv/pages/strawberry2018/cover.jpg';
     var des = des ? des : "2018以「我」出发，一起大不同";
     var url = getCurrUrl();
-
 
     if (data.codeNumber != 1000) {
         console.log(JSON.stringify(data));
