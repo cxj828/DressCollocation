@@ -283,8 +283,7 @@ function loadSourceFun() {
         'img/bg/bg-3.png',
         'img/bg/bg-4.png',
         'img/bg/bg-5.png',
-        'img/creating_bg.png',
-        'img/creating_bg2.png'
+        'img/creating_bg.png'
     ];
     appLoad({
         res: res,

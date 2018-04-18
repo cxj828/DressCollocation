@@ -207,11 +207,11 @@ function appStart() {
         $(".s2 menu").hide();
         createItemsList(app.poster.sex);
         slideTo('.s2');
-        if (app.poster.sex == 2) {
-            $('.s2').css('background', 'url(img/creating_bg2.png)');
-            $('.s2').css('background-size', 'cover');
-            $('.s2').css('background-color', '#127CDC');
-        }
+        // if (app.poster.sex == 2) {
+        //     $('.s2').css('background', 'url(img/creating_bg2.png)');
+        //     $('.s2').css('background-size', 'cover');
+        //     $('.s2').css('background-color', '#127CDC');
+        // }
     });
 
 
@@ -247,10 +247,10 @@ function appStart() {
         canvas.width = body.naturalWidth;
         canvas.height = body.naturalHeight;
         ctx = canvas.getContext('2d');
-        ctx.drawImage(body, 0, 0);
+        ctx.drawImage(body, 40, 50, canvas.width*0.8 ,canvas.height*0.8);
         $.each(items, function () {
             if (this.img) {
-                ctx.drawImage(this.img, 0, 0, canvas.width, canvas.height);
+                ctx.drawImage(this.img, 40, 50, canvas.width*0.8, canvas.height*0.8);
             }
         });
         role = new Image();
