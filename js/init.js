@@ -252,11 +252,11 @@ app.loadRes = function () {
                 time_index++;
                 $(load).find('span').append('.');
             }
-        }, 1000);
+        }, 500);
 
-        // load.addEventListener('webkitAnimationEnd', function () {
-        //
-        // });
+        load.addEventListener('webkitAnimationEnd', function () {
+
+        });
     });
 };
 
