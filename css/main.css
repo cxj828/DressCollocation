@@ -250,7 +250,8 @@
 }
 
 .btn8:after {
-    background-image: url(../img/get.png);
+    background: url(../img/get.png) no-repeat 0 9999%;
+    background-size: 100% auto;
 }
 
 /*section*/
