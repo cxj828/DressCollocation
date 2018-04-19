@@ -549,8 +549,8 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 2em;
-    width: 1em;
-    height: 1em;
+    width: 0.7em;
+    height: 0.7em;
     margin: -0.15em -0.1em 0 0;
     background: url(../img/btn.png) no-repeat 0 80%;
     background-size: 100% auto;
