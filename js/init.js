@@ -230,7 +230,7 @@ app.loadRes = function () {
         // if (img_index > 4) {
         //     img_index = 1;
         // }
-    }, 300);
+    }, 200);
     var load, load_text, load_line, res;
     if (document.readyState != 'complete') {
         window.addEventListener('load', app.loadRes, false);
@@ -252,11 +252,11 @@ app.loadRes = function () {
                 time_index++;
                 $(load).find('span').append('.');
             }
-        }, 500);
+        }, 200);
 
-        load.addEventListener('webkitAnimationEnd', function () {
-
-        });
+        // load.addEventListener('webkitAnimationEnd', function () {
+        //
+        // });
     });
 };
 
@@ -287,8 +287,8 @@ function loadSourceFun() {
     ];
     appLoad({
         res: res,
-        delayLoad: 300,
-        delayLoaded: 300,
+        delayLoad: 200,
+        delayLoaded: 200,
         onError: function () {
             window.appStart && appStart();
             // clearInterval(time)
