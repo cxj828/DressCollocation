@@ -246,13 +246,14 @@ app.loadRes = function () {
         window.time2 = setInterval(function () {
             if (time_index >= 3) {
                 clearInterval(window.time2);
-                loadSourceFun();
             }
             if (time_index <= 3) {
                 time_index++;
                 $(load).find('span').append('.');
             }
-        }, 200);
+        }, 500);
+
+        loadSourceFun();
 
         // load.addEventListener('webkitAnimationEnd', function () {
         //
@@ -287,8 +288,8 @@ function loadSourceFun() {
     ];
     appLoad({
         res: res,
-        delayLoad: 200,
-        delayLoaded: 200,
+        delayLoad: 800,
+        delayLoaded: 800,
         onError: function () {
             window.appStart && appStart();
             // clearInterval(time)

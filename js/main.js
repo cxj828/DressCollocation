@@ -186,6 +186,7 @@ function appStart() {
         $(".s2 menu>div").html(html);
         // $(".s2 menu ul:eq(0) li:eq(0), .s2 menu ul:eq(1) li:eq(0), .s2 menu ul:eq(2) li:eq(0)").trigger('click');
     };
+
     $(".s1 h3 a").on(app.evtClick, function () {
         if ($(this).is('.curr')) {
             return;
@@ -194,6 +195,7 @@ function appStart() {
         app.poster.sex = $(this).index() == 0 ? 1 : 2;
         app.sound.click.play();
     });
+
     $(".s1 h4 a").on(app.evtClick, function () {
         setTimeout(function () {
             app.sound.click.play();
