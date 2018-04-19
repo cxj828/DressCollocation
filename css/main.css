@@ -507,7 +507,8 @@
 }
 
 .s2 {
-    background: url(../img/creating_bg.png);
+    /*background: url(../img/creating_bg.png);*/
+    background: url(../img/long_white_logo.png);
     background-size: 100% 100%;
     background-color: #127CDC;
 }
@@ -534,7 +535,7 @@
     width: auto;
     margin: 5% 0 0 2%;
     font-family: PingFangSC-Medium;
-    font-size: 16px;
+    font-size: 13px;
     color: #FFFFFF;
 }
 
@@ -888,7 +889,7 @@
 
 .share center {
     height: 100%;
-    background-image: url(../img/share.png);
+    background-image: url(../img/share.png?v=1000);
 }
 
 .desc {
