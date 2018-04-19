@@ -20,7 +20,7 @@ html {
 body {
     height: 100%;
     overflow: hidden;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
     color: #222;
     font-family: arial;
     -webkit-user-select: none;
