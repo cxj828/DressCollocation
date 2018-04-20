@@ -500,8 +500,6 @@ function appStart() {
         $(".s3 menu ul:eq(0) li:eq(0)").trigger('click');
     };
     function createPoster(callback) {
-        debugger
-        console.log($(".s3 menu ul:eq(0) li.curr").attr('data-img'))
         var bg = window.imgCache[$(".s3 menu ul:eq(0) li.curr").attr('data-img')];
         var bgColor = '#fff';
         var role = app.poster.role;
