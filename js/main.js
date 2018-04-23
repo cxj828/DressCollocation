@@ -173,16 +173,14 @@ function appStart() {
             sex = 1;
         }
         var html = '', arr;
-        for (var i = 1; i <= 5; i++) {
+        for (var i = 1; i <= 6; i++) {
             html += '<ul>';
             arr = app.poster.items[i - 1][sex - 1];
             $.each(arr, function () {
-                //console.log('img/item' + i + '/i' + i + '-' + this + 's.png' + "--------")
                 html += '<li style="background-image: url(img/item' + i + '/i' + i + '-' + this + 's.png);" data-img="i' + i + '-' + this + '.png"></li>';
             });
             html += '</ul>';
         }
-        ;
         $(".s2 menu>div").html(html);
         // $(".s2 menu ul:eq(0) li:eq(0), .s2 menu ul:eq(1) li:eq(0), .s2 menu ul:eq(2) li:eq(0)").trigger('click');
     };
@@ -249,10 +247,10 @@ function appStart() {
         canvas.width = body.naturalWidth;
         canvas.height = body.naturalHeight;
         ctx = canvas.getContext('2d');
-        ctx.drawImage(body, 40, 50, canvas.width*0.8 ,canvas.height*0.8);
+        ctx.drawImage(body, 40, 50, canvas.width * 0.8, canvas.height * 0.8);
         $.each(items, function () {
             if (this.img) {
-                ctx.drawImage(this.img, 40, 50, canvas.width*0.8, canvas.height*0.8);
+                ctx.drawImage(this.img, 40, 50, canvas.width * 0.8, canvas.height * 0.8);
             }
         });
         role = new Image();
@@ -304,6 +302,7 @@ function appStart() {
             p.attr('style', 'background-image: url(' + imgUrl + ')');
             type -= 1;
             if (app.poster.exLevel[type] && app.poster.exLevel[type][imgID]) {
+                console.log(' type = ' + type +' imgID = ' + imgID  +":" + app.poster.exLevel[type][imgID]);
                 p.css('z-index', app.poster.exLevel[type][imgID]);
             }
             ;
@@ -403,7 +402,7 @@ function appStart() {
                         }
                     }
                 }
-                if (type == 4) {
+                if (type == 5) {
                     p.css('z-index', 30);
                 }
             }
