@@ -651,8 +651,8 @@ function appStart() {
                     app.poster.img1 = poster;
                     app.poster.img2 = poster2;
                     $(".s4 figure img, .s4 .btn3 img, .s5 .btn3 img").remove();
-                    //$(".s4 figure, .s4 .btn3").append(poster);
-                    //$(".s5 figure, .s5 .btn3").append(poster2);
+                    $(".s4 figure, .s4 .btn3").append(poster);
+                    $(".s5 figure, .s5 .btn3").append(poster2);
                     slideTo('.s4');
                     //保存数据到服务器
                     matchUser.exeAddUserPosterFun(poster, poster2, txt);
@@ -664,8 +664,8 @@ function appStart() {
                 app.poster.img1 = poster;
                 app.poster.img2 = poster2;
                 $(".s4 figure img, .s4 .btn3 img, .s5 .btn3 img").remove();
-                //$(".s4 figure, .s4 .btn3").append(poster);
-                //$(".s5 figure, .s5 .btn3").append(poster2);
+                $(".s4 figure, .s4 .btn3").append(poster);
+                $(".s5 figure, .s5 .btn3").append(poster2);
                 slideTo('.s4');
                 //保存数据到服务器
                 matchUser.exeAddUserPosterFun(poster, poster2, txt);
