@@ -377,20 +377,26 @@
 
 .s2 ol li:nth-child(2) a:before {
     background-position-y: 25%;
+    background: url(../img/pig.png) no-repeat 0px 3px;
+    background-size: 100% auto;
 }
 
 .s2 ol li:nth-child(3) a:before {
     background-position-y: 50%;
+    background: url(../img/glasses.png) no-repeat 0px 3px;
+    background-size: 100% auto;
 }
 
 .s2 ol li:nth-child(4) a:before {
-    background-position-y: 75%;
+    background-position-y: 50%;
 }
 
 .s2 ol li:nth-child(5) a:before {
+    background-position-y: 75%;
+}
+.s2 ol li:nth-child(6) a:before {
     background-position-y: 100%;
 }
-
 /*.s2 ol li:nth-child(6) a:before { background-position-y: 103%;}*/
 .s2 ol.selected li {
     display: none;
